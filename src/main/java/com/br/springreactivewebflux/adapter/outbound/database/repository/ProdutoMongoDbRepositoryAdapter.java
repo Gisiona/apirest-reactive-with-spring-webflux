@@ -1,9 +1,8 @@
-package com.br.springreactivewebflux.adapter;
+package com.br.springreactivewebflux.adapter.outbound.database.repository;
 
 
-import com.br.springreactivewebflux.entity.ProdutoDocumento;
-import com.br.springreactivewebflux.repository.ProdutoRepository;
-import com.br.springreactivewebflux.service.ProdutoService;
+import com.br.springreactivewebflux.adapter.outbound.database.entity.ProdutoDocumento;
+import com.br.springreactivewebflux.application.ports.out.ProdutoServiceRepositoryOutPort;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
@@ -12,7 +11,7 @@ import reactor.core.publisher.Mono;
 import java.util.UUID;
 
 @Service @RequiredArgsConstructor
-public class ProdutoServiceAdapter implements ProdutoService {
+public class ProdutoMongoDbRepositoryAdapter implements ProdutoServiceRepositoryOutPort {
 
     private final ProdutoRepository produtoRepository;
 
@@ -37,7 +36,7 @@ public class ProdutoServiceAdapter implements ProdutoService {
     }
 
     @Override
-    public Mono<ProdutoDocumento> atualizarrodutoDocumento(ProdutoDocumento produtoDocumento) {
+    public Mono<ProdutoDocumento> atualizarProdutoDocumento(ProdutoDocumento produtoDocumento) {
         return produtoRepository.save(produtoDocumento);
     }
 }

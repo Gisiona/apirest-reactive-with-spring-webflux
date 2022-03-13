@@ -1,4 +1,4 @@
-package com.br.springreactivewebflux.entity;
+package com.br.springreactivewebflux.adapter.outbound.database.entity;
 
 import lombok.*;
 import org.springframework.data.annotation.Id;

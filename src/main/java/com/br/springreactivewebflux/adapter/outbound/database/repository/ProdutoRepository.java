@@ -1,6 +1,6 @@
-package com.br.springreactivewebflux.repository;
+package com.br.springreactivewebflux.adapter.outbound.database.repository;
 
-import com.br.springreactivewebflux.entity.ProdutoDocumento;
+import com.br.springreactivewebflux.adapter.outbound.database.entity.ProdutoDocumento;
 import org.springframework.data.mongodb.repository.ReactiveMongoRepository;
 import org.springframework.stereotype.Repository;
 
